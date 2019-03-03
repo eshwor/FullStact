@@ -5,6 +5,7 @@ import './App.css';
 //ALL Import
 import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
+import ProjectDetails from './components/project/ProjectDetails';
 
 class App extends Component {
   render() {
@@ -13,7 +14,8 @@ class App extends Component {
         <div>
         <Navbar></Navbar>
           <Switch>
-            <Route path='/' component={Dashboard} />
+            <Route exact path='/' component={Dashboard} />
+            <Route path='/project/:id' component={ProjectDetails} />
           </Switch>
         </div>
       </BrowserRouter>
